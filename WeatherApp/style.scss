@@ -3,13 +3,20 @@
 body {
     margin: 0;
     font-family: "Noto Serif", serif;
+    color: white;
 }
-
+section {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Ken-Cheung_landscape.jpg);
+    background-size: 100% auto;
+    box-shadow: inset 0 0 1000px black;
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+    padding-top: 10rem;
     .location,
     .weather {
         font-size: 2rem;
@@ -33,7 +40,12 @@ main {
         margin-top: 10rem;
         gap: 2rem;
         .weather-temperature {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
             font-size: 3rem;
+            .weather-temperature-degree {
+            }
         }
     }
 }
