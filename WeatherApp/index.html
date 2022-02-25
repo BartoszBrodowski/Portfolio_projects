@@ -5,23 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <main>
+    <div class="weather-card">
+        <div class="temperature-section">
+            <img src="" class="weather-icon" alt="Weather icon">
             <div class="location">
-                <h1 class="location-country">Country</h1>
-                <span class="location-timezone">Timezone</span>
+                <i class="location-icon"></i>
+                <div class="location-name">Warsaw, PL</div>
             </div>
-            <div class="weather">
-                <div class="weather-temperature">
-                    <div class="weather-temperature-degree">30</div>
-                    <div class="weather-temperature-type">°C</div>
-                </div>
-                <div class="weather-type">Sunny</div>
+            <div class="timezone">
+                <div class="time-zone-name">CET</div>
             </div>
-        </main>
-    </section>
+            <div class="weather-type">Sunny</div>
+            <div class="temperature-feels-like">30</div>
+        </div>
+        <div class="weather-info">
+            <div class="humidity">
+                <i class="humidity-icon"></i>
+                <div class="humidity-number number">90%</div>
+            </div>
+            <div class="pressure">
+                <i class="pressure-icon"></i>
+                <div class="pressure-number number">1023hPa</div>
+            </div>
+            <div class="wind-speed">
+                <i class="wind-speed-icon"></i>
+                <div class="wind-speed-number number">11km/h</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
