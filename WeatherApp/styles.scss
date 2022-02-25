@@ -12,8 +12,54 @@ body {
     background-position: center;
     background-size: cover;
 }
-
+.city-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    // padding: 1.5rem;
+    min-width: 20%;
+    min-height: 20%;
+    background-color: white;
+    header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(170, 169, 169);
+        color: #8fb8d8;
+    }
+    .app-name {
+        color: #8fb8d8;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    .city-input-box {
+        border: 2px solid rgb(192, 188, 188);
+        outline: none;
+        // border: none;
+        border-radius: 0.6rem;
+        height: 3rem;
+        box-sizing: border-box;
+        &:active,
+        &:focus {
+            border: 2px solid #8fb8d8;
+            box-sizing: border-box;
+        }
+    }
+    .input-box-button {
+        border: none;
+    }
+    .input-box-button,
+    .city-input-box {
+        border-radius: 0.6rem;
+        height: 3rem;
+        margin: 1.5rem;
+        margin-top: 0;
+        // box-sizing: border-box;
+        // outline: none;
+    }
+}
 .weather-card-container {
+    display: none;
     width: 50%;
     height: 50%;
     padding: 20px;

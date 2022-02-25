@@ -18,7 +18,67 @@ body {
   background-size: cover;
 }
 
+.city-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  min-width: 20%;
+  min-height: 20%;
+  background-color: white;
+}
+
+.city-input header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #aaa9a9;
+  color: #8fb8d8;
+}
+
+.city-input .app-name {
+  color: #8fb8d8;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.city-input .city-input-box {
+  border: 2px solid #c0bcbc;
+  outline: none;
+  border-radius: 0.6rem;
+  height: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.city-input .city-input-box:active, .city-input .city-input-box:focus {
+  border: 2px solid #8fb8d8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.city-input .input-box-button {
+  border: none;
+}
+
+.city-input .input-box-button,
+.city-input .city-input-box {
+  border-radius: 0.6rem;
+  height: 3rem;
+  margin: 1.5rem;
+  margin-top: 0;
+}
+
 .weather-card-container {
+  display: none;
   width: 50%;
   height: 50%;
   padding: 20px;
