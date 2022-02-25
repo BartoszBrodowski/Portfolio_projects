@@ -7,6 +7,8 @@ const cityName = document.querySelector(".location-name");
 const weatherCard = document.querySelector(".weather-card-container");
 const weatherType = document.querySelector(".location-weather-type");
 const goBackArrow = document.querySelector(".go-back-arrow");
+const inputButton = document.querySelector(".input-box-button");
+const weatherIcon = document.querySelector(".weather-icon");
 
 let api;
 
@@ -14,6 +16,10 @@ inputBox.addEventListener("keyup", (event) => {
     if (event.key == "Enter" && inputBox.value != "") {
         getRequest(inputBox.value);
     }
+});
+
+inputButton.addEventListener("click", () => {
+    getRequest(inputBox.value);
 });
 
 goBackArrow.addEventListener("click", () => {
@@ -29,11 +35,29 @@ function getRequest(city) {
 }
 
 function getWeather(city) {
+    let id = city.weather[0].id;
+
     inputCard.style.display = "none";
     weatherCard.style.display = "block";
+
     console.log(city);
+
     temperature.textContent = `${Math.floor(city.main.temp)}`;
     cityName.textContent = city.name;
     weatherType.textContent = city.weather[0].description;
-    console.log(city.weather);
+    console.log(city.weather[0].id);
+
+    if (id <= 232 && id >= 200) {
+        weatherIcon.src = "Icons/Storm.svg";
+    } else if ((id <= 321 && id >= 300) || (id <= 531 && id >= 500)) {
+        weatherIcon.src = "Icons/Cloud_rain.svg";
+    } else if (id <= 622 && id >= 600) {
+        weatherIcon.src = "Icons/Snow.svg";
+    } else if (id <= 781 && id >= 701) {
+        weatherIcon.src = "Icons/Mist.svg";
+    } else if (id == 800) {
+        weatherIcon.src = "Icons/Sun.svg";
+    } else if (id >= 801 && id <= 804) {
+        weatherIcon.src = "Icons/Cloudy.svg";
+    }
 }

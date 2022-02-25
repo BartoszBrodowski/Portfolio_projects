@@ -161,6 +161,10 @@ body {
   height: 70px;
 }
 
+.weather-card-container .weather-card .top-section .go-back-arrow-container .go-back-arrow:hover {
+  cursor: pointer;
+}
+
 .weather-card-container .weather-card .top-section .weather-icon {
   width: 8rem;
   height: 8rem;
