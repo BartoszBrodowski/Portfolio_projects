@@ -9,15 +9,17 @@
 </head>
 <body>
     <div class="city-input">
-        <header><img src="Weather_Icons/Undo_Up.svg" alt="Undo icon" width="50px" height="50px"><div class="app-name">Weather app</div></header>
+        <header>
+            <div class="app-name">Weather app</div>
+        </header>
         
         <input type="text" class="city-input-box" placeholder="Enter city name" required>
         <button class="input-box-button">Check the weather</button>
     </div>
     <div class="weather-card-container">
         <div class="weather-card">
-            <div class="temperature-section">
-                <img src="" class="weather-icon" alt="Weather icon">
+            <div class="left-section">
+                <img src="Icons/Sun.svg" class="weather-icon" alt="Weather icon">
                 <div class="location">
                     <i class="location-icon"></i>
                     <div class="location-name">Warsaw, PL</div>
@@ -25,8 +27,13 @@
                 <div class="timezone">
                     <div class="time-zone-name">CET</div>
                 </div>
-                <div class="weather-type">Sunny</div>
-                <div class="temperature-feels-like">30</div>
+                <div class="temperature-section">
+                    <div class="temperature">
+                        <img src="Icons/termometer.svg" class="termometer-icon" alt="Termometer icon">
+                        <div class="temperature-number">30°C</div>
+                    </div>
+                    <div class="weather-type">Sunny</div>
+                </div>
             </div>
             <div class="weather-info">
                 <div class="humidity">
