@@ -98,9 +98,11 @@ body {
 }
 
 .weather-card-container {
+  -ms-grid-columns: 3 auto;
+      grid-template-columns: 3 auto;
   width: 50%;
   height: 50%;
-  padding: 20px;
+  padding: 20px 0;
   border-radius: 20px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
@@ -120,7 +122,12 @@ body {
 }
 
 .weather-card-container .weather-card .left-section,
-.weather-card-container .weather-card .weather-info {
+.weather-card-container .weather-card .right-section {
+  width: 50%;
+  height: 100%;
+}
+
+.weather-card-container .weather-card .left-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,19 +138,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 50%;
   height: 100%;
-}
-
-.weather-card-container .weather-card .left-section {
   border-right: 1px solid grey;
 }
 
 .weather-card-container .weather-card .left-section .weather-icon {
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
+  margin-top: 1rem;
+}
+
+.weather-card-container .weather-card .left-section .location .location-name {
+  margin-top: 1rem;
 }
 
 .weather-card-container .weather-card .left-section .temperature-section {
@@ -172,10 +178,47 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  margin-top: 3rem;
 }
 
 .weather-card-container .weather-card .left-section .temperature-section .temperature .termometer-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.weather-card-container .weather-card .left-section .temperature-section .temperature .temperature-number {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.weather-card-container .weather-card .left-section .temperature-section .temperature .temperature-number .degree-sign {
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.weather-card-container .weather-card .right-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3 auto;
+      grid-template-rows: 3 auto;
+  text-align: center;
+}
+
+.weather-card-container .weather-card .right-section .humidity,
+.weather-card-container .weather-card .right-section .pressure {
+  border-bottom: 1px solid black;
+}
+
+.weather-card-container .weather-card .right-section .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
