@@ -22,7 +22,7 @@ body {
   background-size: cover;
 }
 
-.city-input {
+.input-card {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -38,7 +38,7 @@ body {
   background-color: white;
 }
 
-.city-input header {
+.input-card header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,20 +54,20 @@ body {
   color: #8fb8d8;
 }
 
-.city-input header .app-name {
+.input-card header .app-name {
   color: #8fb8d8;
   font-size: 1.5rem;
   text-align: center;
   padding: 1rem 0;
 }
 
-.city-input header img,
-.city-input header .filler {
+.input-card header img,
+.input-card header .filler {
   width: 50px;
   height: 50px;
 }
 
-.city-input .city-input-box {
+.input-card .city-input-box {
   border: 2px solid #c0bcbc;
   outline: none;
   border-radius: 0.6rem;
@@ -78,23 +78,23 @@ body {
   font-size: 1.2rem;
 }
 
-.city-input .city-input-box:active, .city-input .city-input-box:focus {
+.input-card .city-input-box:active, .input-card .city-input-box:focus {
   border: 2px solid #8fb8d8;
 }
 
-.city-input .input-box-button {
+.input-card .input-box-button {
   border: none;
   background-color: #8fb8d8;
   color: white;
   font-size: 1.2rem;
 }
 
-.city-input .input-box-button:hover {
+.input-card .input-box-button:hover {
   cursor: pointer;
 }
 
-.city-input .input-box-button,
-.city-input .city-input-box {
+.input-card .input-box-button,
+.input-card .city-input-box {
   border-radius: 0.6rem;
   height: 3rem;
   margin: 0 1.5rem;
