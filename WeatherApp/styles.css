@@ -89,6 +89,10 @@ body {
   font-size: 1.2rem;
 }
 
+.city-input .input-box-button:hover {
+  cursor: pointer;
+}
+
 .city-input .input-box-button,
 .city-input .city-input-box {
   border-radius: 0.6rem;
@@ -220,5 +224,9 @@ body {
   width: 50px;
   height: 100%;
   margin-right: 0.5rem;
+}
+
+.weather-card-container .weather-card .top-section .carret-container .carret:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
