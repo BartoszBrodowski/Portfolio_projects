@@ -12,7 +12,6 @@
         <header>
             <div class="app-name">Weather app</div>
         </header>
-        
         <input type="text" class="city-input-box" placeholder="Enter city name" required>
         <button class="input-box-button">Check the weather</button>
     </div>
@@ -20,11 +19,14 @@
         <div class="weather-card">
             <div class="top-section">
                 <div class="go-back-arrow-container">
-                    <img src="Icons/Arrow_Left(1).svg" class="go-back-arrow" alt="Arrow to go back to search screen">
+                    <img src="Icons/Arrow_Left.svg" class="go-back-arrow" alt="Arrow to go back to search screen">
                 </div>
                 <img src="Icons/Sun.svg" class="weather-icon" alt="Weather icon">
                 <div class="location">
-                    <div class="location-name"><img src="Icons/Location.svg" class="location-icon" alt="Location icon">Warsaw, PL</div>
+                    <div class="location-container">
+                        <img src="Icons/Location.svg" class="location-icon" alt="Location icon">
+                        <div class="location-name">Warsaw, PL</div>
+                    </div>
                     <div class="location-weather-type">sunny</div>
                 </div>
                 <!-- <div class="timezone">
@@ -33,7 +35,9 @@
                 <div class="temperature-section">
                     <div class="temperature">
                         <img src="Icons/termometer.svg" class="termometer-icon" alt="Termometer icon">
-                        <div class="temperature-number">30<span class="degree-sign">°</span>C</div>
+                        <div class="temperature-number">30</div>
+                        <span class="degree-sign">°</span>
+                        <span class="celsius-sign">C</span>
                     </div>
                 </div>
                 <div class="carret-container"><img src="Icons/Carret_Left.svg" class="carret" alt="Show detailed information carret">
@@ -55,5 +59,6 @@
             </div> -->
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -16,8 +16,7 @@ body {
     background-size: cover;
 }
 .input-card {
-    display: none;
-    // display: flex;
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
     min-width: 20%;
@@ -77,7 +76,7 @@ body {
     }
 }
 .weather-card-container {
-    // display: none;
+    display: none;
     width: 35%;
     height: 50%;
     border-radius: 20px;
@@ -119,16 +118,20 @@ body {
                 flex-direction: column;
                 align-items: center;
                 font-size: 1.4rem;
-                .location-icon {
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 0.5rem;
-                }
-                .location-name {
+                .location-container {
                     display: flex;
                     align-items: center;
-                    font-weight: 600;
                     margin-top: 1rem;
+                    .location-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 0.5rem;
+                    }
+                    .location-name {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 600;
+                    }
                 }
                 .location-weather-type {
                     text-transform: capitalize;
@@ -144,7 +147,6 @@ body {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 10px;
                     margin-top: 2rem;
                     .termometer-icon {
                         width: 3rem;
@@ -155,12 +157,13 @@ body {
                         align-items: center;
                         font-size: 5rem;
                         font-weight: bold;
-                        .degree-sign {
-                            font-size: 40px;
-                            height: 120px;
-                            padding-top: 10px;
-                            font-weight: 400;
-                        }
+                    }
+                    .degree-sign {
+                        font-size: 3rem;
+                        padding-bottom: 2rem;
+                    }
+                    .celsius-sign {
+                        font-size: 5rem;
                     }
                 }
             }

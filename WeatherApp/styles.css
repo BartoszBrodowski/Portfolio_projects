@@ -23,7 +23,9 @@ body {
 }
 
 .input-card {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -102,6 +104,7 @@ body {
 }
 
 .weather-card-container {
+  display: none;
   width: 35%;
   height: 50%;
   border-radius: 20px;
@@ -177,13 +180,23 @@ body {
   font-size: 1.4rem;
 }
 
-.weather-card-container .weather-card .top-section .location .location-icon {
+.weather-card-container .weather-card .top-section .location .location-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.weather-card-container .weather-card .top-section .location .location-container .location-icon {
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
 }
 
-.weather-card-container .weather-card .top-section .location .location-name {
+.weather-card-container .weather-card .top-section .location .location-container .location-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +204,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 600;
-  margin-top: 1rem;
 }
 
 .weather-card-container .weather-card .top-section .location .location-weather-type {
@@ -223,7 +235,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   margin-top: 2rem;
 }
 
@@ -243,11 +254,13 @@ body {
   font-weight: bold;
 }
 
-.weather-card-container .weather-card .top-section .temperature-section .temperature .temperature-number .degree-sign {
-  font-size: 40px;
-  height: 120px;
-  padding-top: 10px;
-  font-weight: 400;
+.weather-card-container .weather-card .top-section .temperature-section .temperature .degree-sign {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.weather-card-container .weather-card .top-section .temperature-section .temperature .celsius-sign {
+  font-size: 5rem;
 }
 
 .weather-card-container .weather-card .top-section .carret-container {
