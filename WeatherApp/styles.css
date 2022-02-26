@@ -23,9 +23,7 @@ body {
 }
 
 .input-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -104,9 +102,11 @@ body {
 }
 
 .weather-card-container {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 35%;
-  height: 50%;
+  height: 60%;
   border-radius: 20px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
@@ -121,12 +121,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.weather-card-container .weather-card .top-section,
-.weather-card-container .weather-card .bottom-section {
   width: 100%;
   height: 100%;
 }
@@ -265,6 +259,7 @@ body {
 
 .weather-card-container .weather-card .top-section .temperature-section .temperature .celsius-sign {
   font-size: 5rem;
+  font-weight: bold;
 }
 
 .weather-card-container .weather-card .top-section .carret-container {
@@ -279,5 +274,28 @@ body {
 
 .weather-card-container .weather-card .top-section .carret-container .carret:hover {
   cursor: pointer;
+}
+
+.weather-card-container .weather-card .bottom-section {
+  width: 100%;
+  height: 10vh;
+}
+
+.weather-card-container .weather-card .bottom-section .details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.weather-card-container .weather-card .bottom-section .details-container .temperature-feels-like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */
