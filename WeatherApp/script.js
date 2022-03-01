@@ -13,6 +13,7 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 const detailsCarret = document.querySelector(".carret");
 const bottomSection = document.querySelector(".bottom-section");
+const carret = document.querySelector(".carret");
 
 // Details
 const feelsLikeTemp = document.querySelector(".temperature-feels-like-number");
@@ -38,7 +39,8 @@ goBackArrow.addEventListener("click", () => {
 });
 
 detailsCarret.addEventListener("click", () => {
-    bottomSection.style.display = "block";
+    bottomSection.style.visibility = "visible";
+    carret.classList.toggle(".transformed");
 });
 
 function getRequest(city) {
