@@ -39,8 +39,8 @@ goBackArrow.addEventListener("click", () => {
 });
 
 detailsCarret.addEventListener("click", () => {
-    bottomSection.style.visibility = "visible";
-    carret.classList.toggle(".transformed");
+    bottomSection.classList.toggle("show");
+    carret.classList.toggle("transformed");
 });
 
 function getRequest(city) {
