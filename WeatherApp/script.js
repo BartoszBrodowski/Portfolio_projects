@@ -51,6 +51,8 @@ function getRequest(city) {
 }
 
 function getWeather(city) {
+    // (TODO) add error 404 handler that displays info about an error,
+    // pending of the function as well as a successful outcome
     let id = city.weather[0].id;
 
     inputCard.style.display = "none";
