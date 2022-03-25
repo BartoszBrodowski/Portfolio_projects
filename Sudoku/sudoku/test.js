@@ -17,3 +17,5 @@ console.log(initialBoard);
 // https://codesandbox.io/s/inspiring-payne-6uzfd?file=/src/App.js
 // Bez JSON.parse kod zmienia wartość ale nie updatuje stanu liczby na ekranie, po użyciu
 // funkcji z JSON.parse liczba jest updatowana
+
+// do deepcopy lodach/rfdc (na githubie)
