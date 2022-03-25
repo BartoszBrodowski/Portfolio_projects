@@ -42,8 +42,7 @@ const Board = () => {
                 // Check if the inputed number is in the boards column
                 for (let i = 0; i < 9; i++) {
                     if (playersBoard[i][column] == inputValue) {
-                        // change color
-                        // return false;
+                        return false;
                     }
                 }
                 playersBoard[row][column] = inputValue;
