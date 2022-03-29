@@ -52,7 +52,7 @@ body {
         border: none;
         background-color: #8fb8d8;
         color: white;
-        font-size: 1.2em;   
+        font-size: 1.2em;
         &:hover {
             cursor: pointer;
         }
@@ -94,8 +94,8 @@ body {
                 top: 0;
                 left: 0;
                 .go-back-arrow {
-                    width: 50px;
-                    height: 50px;
+                    width: 3.5em;
+                    height: 3.5em;
                     &:hover {
                         cursor: pointer;
                     }
@@ -139,23 +139,21 @@ body {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    margin-top: 2rem;
+                    // margin-top: 2rem;
                     .termometer-icon {
                         width: 3em;
                         height: 3em;
                     }
                     .temperature-number {
-                        display: flex;
-                        align-items: center;
-                        font-size: 5em;
+                        font-size: 4em;
                         font-weight: bold;
                     }
                     .degree-sign {
                         font-size: 3em;
-                        padding-bottom: 2em;
+                        padding-bottom: 1em;
                     }
                     .celsius-sign {
-                        font-size: 5em;
+                        font-size: 4em;
                         font-weight: bold;
                     }
                 }
@@ -166,6 +164,7 @@ body {
                     width: 50px;
                     height: 100%;
                     transition: all 0.25s linear;
+                    user-select: none;
                     &:hover {
                         cursor: pointer;
                     }
@@ -240,6 +239,11 @@ body {
     .weather-card-container {
         .weather-card {
             .top-section {
+                .weather-icon {
+                    margin-top: 2rem;
+                    width: 5.5rem;
+                    height: 5.5rem;
+                }
                 .temperature-section {
                     .temperature {
                         .temperature-number,
@@ -269,15 +273,16 @@ body {
             .top-section {
                 .go-back-arrow-container {
                     .go-back-arrow {
-                        width: 2em;
+                        width: 3em;
+                        height: 3em;
                     }
                 }
                 .weather-icon {
-                    width: 3.5em;
-                    height: 3.5em;
+                    width: 4.7em;
+                    height: 4.7em;
                 }
                 .location {
-                    font-size: 1em;
+                    font-size: 1.5em;
                     .location-container {
                         font-size: 0.8em;
                         margin: 0;
@@ -299,50 +304,54 @@ body {
                         }
                         .temperature-number,
                         .celsius-sign {
-                            font-size: 2.5em;
+                            font-size: 3.5em;
                         }
                         .degree-sign {
-                            font-size: 1.6em;
+                            font-size: 2.1em;
                             padding-bottom: 1em;
                         }
                     }
                 }
                 .carret-container {
                     .carret {
-                        width: 2em;
+                        width: 2.5em;
                     }
                 }
             }
             .bottom-section {
                 .details-container {
-                    font-size: 0.6em;
+                    font-size: 0.8em;
+                    > * {
+                        flex-basis: 50%;
+                    }
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     .input-card {
         width: 60vw;
         header {
             font-size: 1em;
         }
         .city-input-box {
-            font-size: 0.8em;
+            font-size: 0.9em;
         }
         .input-box-button {
-            font-size: 0.6em;
+            font-size: 0.9em;
         }
     }
     .weather-card-container {
+        height: 40vh;
         width: 60vw;
         .weather-card {
             .top-section {
                 .go-back-arrow-container {
                     .go-back-arrow {
-                        width: 1.5em;
-                        height: 1.5em;
+                        width: 2.3em;
+                        height: 2.3em;
                     }
                 }
                 .weather-icon {
@@ -400,7 +409,7 @@ body {
         .weather-card {
             .bottom-section {
                 .details-container {
-                    >* {
+                    > * {
                         flex-basis: 50%;
                     }
                 }

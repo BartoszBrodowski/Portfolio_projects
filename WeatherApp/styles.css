@@ -142,8 +142,8 @@ body {
 }
 
 .weather-card-container .weather-card .top-section .go-back-arrow-container .go-back-arrow {
-  width: 50px;
-  height: 50px;
+  width: 3.5em;
+  height: 3.5em;
 }
 
 .weather-card-container .weather-card .top-section .go-back-arrow-container .go-back-arrow:hover {
@@ -224,7 +224,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
 }
 
 .weather-card-container .weather-card .top-section .temperature-section .temperature .termometer-icon {
@@ -233,23 +232,17 @@ body {
 }
 
 .weather-card-container .weather-card .top-section .temperature-section .temperature .temperature-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
 }
 
 .weather-card-container .weather-card .top-section .temperature-section .temperature .degree-sign {
   font-size: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .weather-card-container .weather-card .top-section .temperature-section .temperature .celsius-sign {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
 }
 
@@ -262,6 +255,10 @@ body {
   height: 100%;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .weather-card-container .weather-card .top-section .carret-container .carret:hover {
@@ -346,6 +343,11 @@ body {
 }
 
 @media only screen and (max-width: 1366px) {
+  .weather-card-container .weather-card .top-section .weather-icon {
+    margin-top: 2rem;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
   .weather-card-container .weather-card .top-section .temperature-section .temperature .temperature-number,
   .weather-card-container .weather-card .top-section .temperature-section .temperature .celsius-sign {
     font-size: 4rem;
@@ -364,14 +366,15 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .weather-card-container .weather-card .top-section .go-back-arrow-container .go-back-arrow {
-    width: 2em;
+    width: 3em;
+    height: 3em;
   }
   .weather-card-container .weather-card .top-section .weather-icon {
-    width: 3.5em;
-    height: 3.5em;
+    width: 4.7em;
+    height: 4.7em;
   }
   .weather-card-container .weather-card .top-section .location {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   .weather-card-container .weather-card .top-section .location .location-container {
     font-size: 0.8em;
@@ -393,21 +396,25 @@ body {
   }
   .weather-card-container .weather-card .top-section .temperature-section .temperature .temperature-number,
   .weather-card-container .weather-card .top-section .temperature-section .temperature .celsius-sign {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
   .weather-card-container .weather-card .top-section .temperature-section .temperature .degree-sign {
-    font-size: 1.6em;
+    font-size: 2.1em;
     padding-bottom: 1em;
   }
   .weather-card-container .weather-card .top-section .carret-container .carret {
-    width: 2em;
+    width: 2.5em;
   }
   .weather-card-container .weather-card .bottom-section .details-container {
-    font-size: 0.6em;
+    font-size: 0.8em;
+  }
+  .weather-card-container .weather-card .bottom-section .details-container > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .input-card {
     width: 60vw;
   }
@@ -415,17 +422,18 @@ body {
     font-size: 1em;
   }
   .input-card .city-input-box {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .input-card .input-box-button {
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
   .weather-card-container {
+    height: 40vh;
     width: 60vw;
   }
   .weather-card-container .weather-card .top-section .go-back-arrow-container .go-back-arrow {
-    width: 1.5em;
-    height: 1.5em;
+    width: 2.3em;
+    height: 2.3em;
   }
   .weather-card-container .weather-card .top-section .weather-icon {
     width: 3.5em;
