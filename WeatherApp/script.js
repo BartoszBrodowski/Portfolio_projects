@@ -71,18 +71,18 @@ function getWeather(city) {
     windSpeed.textContent = `${Math.floor(city.wind.speed * 3.6)}km/h`;
 
     if (id <= 232 && id >= 200) {
-        weatherIcon.src = "Icons/Weather/Storm.svg";
+        weatherIcon.src = "components/icons/weather/Storm.svg";
     } else if ((id <= 321 && id >= 300) || (id <= 531 && id >= 500)) {
-        weatherIcon.src = "Icons/Weather/Cloud_rain.svg";
+        weatherIcon.src = "components/icons/weather/Cloud_rain.svg";
     } else if (id <= 622 && id >= 600) {
-        weatherIcon.src = "Icons/Weather/Snow.svg";
+        weatherIcon.src = "components/icons/weather/Snow.svg";
     } else if (id <= 781 && id >= 701) {
-        weatherIcon.src = "Icons/Weather/Mist.svg";
+        weatherIcon.src = "components/icons/weather/Mist.svg";
     } else if (id == 800) {
-        weatherIcon.src = "Icons/Weather/Sun.svg";
+        weatherIcon.src = "components/icons/weather/Sun.svg";
     } else if (id == 802 || id == 803) {
-        weatherIcon.src = "Icons/Weather/Cloud_sun.svg";
+        weatherIcon.src = "components/icons/weather/Cloud_sun.svg";
     } else if ((id = 804)) {
-        weatherIcon.src = "Icons/Weather/Cloudy.svg";
+        weatherIcon.src = "components/icons/weather/Cloudy.svg";
     }
 }
