@@ -31,20 +31,9 @@ body {
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        position: relative;
         border-bottom: 1px solid rgb(170, 169, 169);
         color: #8fb8d8;
-        .app-name {
-            color: #8fb8d8;
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        img,
-        .filler {
-            width: 50px;
-            height: 50px;
-        }
+        padding: 1rem 0;
     }
     .city-input-box {
         border: 2px solid rgb(192, 188, 188);
@@ -53,7 +42,7 @@ body {
         height: 3rem;
         box-sizing: border-box;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         &:active,
         &:focus {
             border: 2px solid #8fb8d8;
@@ -63,7 +52,7 @@ body {
         border: none;
         background-color: #8fb8d8;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.2em;   
         &:hover {
             cursor: pointer;
         }
@@ -87,7 +76,8 @@ body {
     padding: 10px;
     .weather-card {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         width: 100%;
         height: 100%;
@@ -98,7 +88,7 @@ body {
             justify-content: center;
             position: relative;
             width: 100%;
-            height: 100%;
+            height: 80%;
             .go-back-arrow-container {
                 position: absolute;
                 top: 0;
@@ -112,14 +102,14 @@ body {
                 }
             }
             .weather-icon {
-                width: 7rem;
-                height: 7rem;
+                width: 7em;
+                height: 7em;
             }
             .location {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-size: 1.4rem;
+                font-size: 1.4em;
                 .location-container {
                     display: flex;
                     align-items: center;
@@ -151,21 +141,21 @@ body {
                     align-items: center;
                     margin-top: 2rem;
                     .termometer-icon {
-                        width: 3rem;
-                        height: 3rem;
+                        width: 3em;
+                        height: 3em;
                     }
                     .temperature-number {
                         display: flex;
                         align-items: center;
-                        font-size: 5rem;
+                        font-size: 5em;
                         font-weight: bold;
                     }
                     .degree-sign {
-                        font-size: 3rem;
-                        padding-bottom: 2rem;
+                        font-size: 3em;
+                        padding-bottom: 2em;
                     }
                     .celsius-sign {
-                        font-size: 5rem;
+                        font-size: 5em;
                         font-weight: bold;
                     }
                 }
@@ -188,15 +178,18 @@ body {
         .bottom-section {
             opacity: 0;
             width: 100%;
-            height: 1%;
-            font-size: 1.1rem;
+            height: 20%;
+            font-size: 1.1em;
             color: white;
             transition: all 0.5s linear;
+            display: flex;
+            justify-content: center;
             .details-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
+                width: 100%;
                 height: 100%;
                 > * {
                     display: flex;
@@ -214,8 +207,8 @@ body {
                     gap: 4px;
                     font-weight: bold;
                     .details-icon {
-                        width: 1rem;
-                        height: 1rem;
+                        width: 1em;
+                        height: 1em;
                     }
                 }
             }
@@ -267,5 +260,151 @@ body {
     }
     .details-container {
         font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .weather-card-container {
+        .weather-card {
+            .top-section {
+                .go-back-arrow-container {
+                    .go-back-arrow {
+                        width: 2em;
+                    }
+                }
+                .weather-icon {
+                    width: 3.5em;
+                    height: 3.5em;
+                }
+                .location {
+                    font-size: 1em;
+                    .location-container {
+                        font-size: 0.8em;
+                        margin: 0;
+                        .location-icon {
+                            width: 1em;
+                            height: 1em;
+                        }
+                    }
+                    .location-weather-type {
+                        font-size: 0.8em;
+                    }
+                }
+                .temperature-section {
+                    .temperature {
+                        margin: 0;
+                        .termometer-icon {
+                            width: 1.8em;
+                            height: 1.8em;
+                        }
+                        .temperature-number,
+                        .celsius-sign {
+                            font-size: 2.5em;
+                        }
+                        .degree-sign {
+                            font-size: 1.6em;
+                            padding-bottom: 1em;
+                        }
+                    }
+                }
+                .carret-container {
+                    .carret {
+                        width: 2em;
+                    }
+                }
+            }
+            .bottom-section {
+                .details-container {
+                    font-size: 0.6em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .input-card {
+        width: 60vw;
+        header {
+            font-size: 1em;
+        }
+        .city-input-box {
+            font-size: 0.8em;
+        }
+        .input-box-button {
+            font-size: 0.6em;
+        }
+    }
+    .weather-card-container {
+        width: 60vw;
+        .weather-card {
+            .top-section {
+                .go-back-arrow-container {
+                    .go-back-arrow {
+                        width: 1.5em;
+                        height: 1.5em;
+                    }
+                }
+                .weather-icon {
+                    width: 3.5em;
+                    height: 3.5em;
+                }
+                .location {
+                    font-size: 1em;
+                    .location-container {
+                        font-size: 0.8em;
+                        margin: 0;
+                        .location-icon {
+                            width: 1em;
+                            height: 1em;
+                        }
+                    }
+                    .location-weather-type {
+                        font-size: 0.8em;
+                    }
+                }
+                .temperature-section {
+                    .temperature {
+                        margin: 0;
+                        .termometer-icon {
+                            width: 1.8em;
+                            height: 1.8em;
+                        }
+                        .temperature-number,
+                        .celsius-sign {
+                            font-size: 2.1em;
+                        }
+                        .degree-sign {
+                            font-size: 1.6em;
+                            padding-bottom: 1em;
+                        }
+                    }
+                }
+                .carret-container {
+                    .carret {
+                        width: 2em;
+                    }
+                }
+            }
+            .bottom-section {
+                .details-container {
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .weather-card-container {
+        .weather-card {
+            .bottom-section {
+                .details-container {
+                    >* {
+                        flex-basis: 50%;
+                    }
+                }
+            }
+        }
     }
 }
