@@ -1,17 +1,31 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+// import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 
 const initialBoard = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [5, 2, 0, 8, 0, 0, 0, 0, 1],
+    [4, 3, 0, 0, 0, 6, 2, 8, 0],
+    [8, 0, 0, 2, 0, 0, 6, 0, 0],
+    [0, 4, 1, 7, 0, 2, 0, 5, 3],
+    [0, 8, 5, 0, 3, 0, 7, 2, 4],
+    [0, 0, 3, 0, 0, 0, 0, 6, 0],
+    [0, 0, 8, 0, 0, 7, 0, 9, 0],
+    [3, 6, 0, 0, 1, 5, 0, 0, 7],
+    [0, 0, 0, 0, 6, 0, 5, 1, 0],
 ];
+
+// Board to test if checkIfFulfilled() function works
+
+// const solvedBoard = [
+//     [5, 2, 6, 8, 7, 9, 4, 3, 1],
+//     [4, 3, 7, 1, 5, 6, 2, 8, 9],
+//     [8, 1, 9, 2, 4, 3, 6, 7, 5],
+//     [0, 4, 1, 7, 8, 2, 9, 5, 3],
+//     [9, 8, 5, 6, 3, 1, 7, 2, 4],
+//     [2, 7, 3, 5, 9, 4, 1, 6, 8],
+//     [1, 5, 8, 4, 2, 7, 3, 9, 6],
+//     [3, 6, 2, 9, 1, 5, 8, 4, 7],
+//     [7, 9, 4, 3, 6, 8, 5, 1, 0],
+// ];
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -22,6 +36,17 @@ const Board = () => {
     };
 
     const [board, setBoard] = useState(deepVariable(initialBoard));
+
+    const checkIfFulfilled = () => {
+        for (let i = 0; i < initialBoard[0].length; i++) {
+            for (let j = 0; j < initialBoard[0].length; j++) {
+                if (initialBoard[i][j] === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    };
 
     const changeNumber = (event, row, column) => {
         const inputValue = parseInt(event.target.value);
@@ -41,7 +66,7 @@ const Board = () => {
             if (!playersBoard[row].includes(inputValue)) {
                 // Check if the inputed number is in the boards column
                 for (let i = 0; i < 9; i++) {
-                    if (playersBoard[i][column] == inputValue) {
+                    if (playersBoard[i][column] === inputValue) {
                         return false;
                     }
                 }
@@ -52,6 +77,9 @@ const Board = () => {
         }
 
         setBoard(playersBoard);
+        if (checkIfFulfilled) {
+            console.log("Fulfilled");
+        }
     };
 
     return (

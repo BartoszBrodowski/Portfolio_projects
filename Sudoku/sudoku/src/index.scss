@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Cabin&family=Krub:wght@500&family=Lato&family=Noto+Serif&family=Nunito:wght@400;500;600&family=Poppins:wght@400;500;600&family=Raleway:wght@200&family=Roboto&family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Fredoka+One&family=Krub:wght@500&family=Lato&family=Noto+Serif&family=Nunito:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto&family=Source+Code+Pro:wght@300&display=swap");
 body {
     background-color: rgb(86, 87, 126);
     font-family: "Cabin", sans-serif;
@@ -12,6 +13,9 @@ body {
     margin: 5rem auto;
     .header {
         font-size: 3em;
+        color: rgb(212, 212, 169);
+        font-family: "Fredoka One", cursive;
+        text-shadow: 2px 2px rgb(143, 143, 143);
     }
 
     .board {
