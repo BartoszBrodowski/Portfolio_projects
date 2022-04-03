@@ -1,4 +1,4 @@
-// 3f93a2a634d9395fdeb55da15ee519b2
+const apiKey = config.API_KEY;
 
 // User input
 const inputCard = document.querySelector(".input-card");
@@ -44,7 +44,7 @@ detailsCarret.addEventListener("click", () => {
 });
 
 function getRequest(city) {
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=3f93a2a634d9395fdeb55da15ee519b2`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     fetch(api)
         .then((apiResponse) => apiResponse.json())
         .then((result) => getWeather(result));

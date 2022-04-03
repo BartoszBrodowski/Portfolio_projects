@@ -43,20 +43,24 @@ body {
         box-sizing: border-box;
         text-align: center;
         font-size: 1.2em;
+    
         &:active,
         &:focus {
             border: 2px solid #8fb8d8;
         }
     }
+    
     .input-box-button {
         border: none;
         background-color: #8fb8d8;
         color: white;
         font-size: 1.2em;
+    
         &:hover {
             cursor: pointer;
         }
     }
+    
     .input-box-button,
     .city-input-box {
         border-radius: 0.6rem;
@@ -64,6 +68,7 @@ body {
         margin: 0 1.5rem;
         margin-top: 0;
     }
+
 }
 .weather-card-container {
     // display: flex;
@@ -235,7 +240,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
     .weather-card-container {
         .weather-card {
             .top-section {
@@ -267,7 +272,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .weather-card-container {
         .weather-card {
             .top-section {
@@ -330,7 +335,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .input-card {
         width: 60vw;
         header {
@@ -404,7 +409,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 410px) {
+@media screen and (max-width: 410px) {
     .weather-card-container {
         .weather-card {
             .bottom-section {
@@ -414,6 +419,30 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 2000px),
+screen and (min-height: 1200px) {
+    .input-card {
+        display: flex;
+        align-items: center;
+        header {
+            width: 100%;
+        };
+        .input-box-button,
+        .city-input-box {
+            width: 350px;
+        }
+        .city-input-box {
+            margin-top: auto;
+        }
+        .input-box-button {
+            margin-top: 10%;
+            margin-bottom: auto;
+            position: relative;
+            bottom: 0px;
         }
     }
 }
