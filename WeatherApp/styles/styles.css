@@ -17,7 +17,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(components/img/Billy-Huynh-clouds.jpg);
+  background-image: url(../components/img/Billy-Huynh-clouds.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -507,6 +507,30 @@ body {
     margin-bottom: auto;
     position: relative;
     bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1367px), screen and (max-height: 750px) {
+  .weather-card-container .weather-card .top-section .weather-icon {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .weather-card-container .weather-card .top-section .temperature-section .temperature .temperature {
+    font-size: 3.2em;
+  }
+}
+
+@media screen and (max-height: 550px), screen and (min-width: 1366px) {
+  .weather-card-container {
+    padding: 30px;
+    padding-bottom: 0px;
+  }
+  .weather-card-container .weather-card .top-section .weather-icon {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .weather-card-container .weather-card .top-section .temperature-section .temperature .temperature {
+    font-size: 3em;
   }
 }
 /*# sourceMappingURL=styles.css.map */

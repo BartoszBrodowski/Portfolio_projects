@@ -3,7 +3,7 @@
     margin: 0;
     font-family: "Poppins";
 }
-
+// components/img/Billy-Huynh-clouds.jpg
 body {
     margin: 0;
     width: 100vw;
@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(components/img/Billy-Huynh-clouds.jpg);
+    background-image: url(../components/img/Billy-Huynh-clouds.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -79,6 +79,7 @@ body {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     padding: 10px;
+    // padding-bottom: 30px;
     .weather-card {
         display: flex;
         // justify-content: center;
@@ -242,6 +243,7 @@ body {
 
 @media screen and (max-width: 1366px) {
     .weather-card-container {
+        // padding-bottom: 30px;
         .weather-card {
             .top-section {
                 .weather-icon {
@@ -443,6 +445,51 @@ screen and (min-height: 1200px) {
             margin-bottom: auto;
             position: relative;
             bottom: 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 1367px),
+screen and (max-height: 750px) {
+        .weather-card-container {
+            .weather-card {
+                .top-section {
+                .weather-icon {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                }
+                    .temperature-section {
+                        .temperature {
+                            .temperature {
+                                font-size: 3.2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
+
+@media screen and (max-height: 550px),
+screen and (min-width: 1366px) {
+    .weather-card-container {
+        padding: 30px;
+        padding-bottom: 0px;
+        .weather-card {
+            .top-section {
+                .weather-icon {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                }
+
+                .temperature-section {
+                    .temperature {
+                        .temperature {
+                            font-size: 3em;
+                        }
+                    }
+                }
+            }
         }
     }
 }
