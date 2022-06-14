@@ -10,6 +10,4 @@ At the moment the projects are:
 
 2. Snake game (Python, pygame)
 
-3. Sudoku (React, CSS (SASS)) _work in progress_
-
-4. Mini Facebook Clone (HTML, CSS (SASS))
+3. Mini Facebook Clone (HTML, CSS (SASS))
